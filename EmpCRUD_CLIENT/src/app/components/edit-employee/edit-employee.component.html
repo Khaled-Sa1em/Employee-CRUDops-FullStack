@@ -1,0 +1,52 @@
+<h1 class="mb-3 offset-3">Edit Employee</h1>
+<div class="col-6 offset-3">
+  <!-- forms module -->
+  <form #form="ngForm" (ngSubmit)="editEmployee()">
+    <div class="form-group mb-3">
+      <label for="name" class="mb-1">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        placeholder="Enter Emp Name"
+        [(ngModel)]="editEmployeeRequest.name"
+        name="name"
+      />
+    </div>
+    <div class="form-group mb-3">
+      <label for="email" class="mb-1">Email</label>
+      <input
+        type="text"
+        class="form-control"
+        id="email"
+        placeholder="Enter Emp email"
+        [(ngModel)]="editEmployeeRequest.email"
+        name="email"
+      />
+    </div>
+    <div class="form-group mb-3">
+      <label for="deptName" class="mb-1">DeptName</label>
+      <input
+        type="text"
+        class="form-control"
+        id="deptName"
+        placeholder="Enter Emp DeptName"
+        [(ngModel)]="editEmployeeRequest.deptName"
+        name="deptName"
+      />
+    </div>
+    <div class="form-group mb-3">
+      <label for="salary" class="mb-1">Salary</label>
+      <input
+        type="number"
+        class="form-control"
+        id="salary"
+        min="0"
+        placeholder="Enter Emp salary"
+        [(ngModel)]="editEmployeeRequest.salary"
+        name="salary"
+      />
+    </div>
+    <button class="btn btn-primary" type="submit">Save</button>
+  </form>
+</div>
